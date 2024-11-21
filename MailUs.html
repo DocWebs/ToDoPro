@@ -785,18 +785,27 @@ textarea::placeholder {
     position: absolute;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1);
     display: flex;
     align-items: center;
     justify-content: center;
-}            
+}      
+
+.card8 .cds8 button.done {
+    background: grey;
+    color: black;
+    transition: 0.5s;
+    transform: translateX(-50%) scale(0.8);
+}    
         </style>
     </head>
     <body>
         <form class="mail-us" action="https://formsubmit.co/9a5954fc0fcd14ecade8d5a733900b23" method="POST">
             
-            <!-- For the Mail Sender -->
+            <!-- For the Mail Sender 
             <input type="hidden" name="_autoresponse" value="Hey there Buddy !! 🥰, this is a auto response but hand written by me. 😅 THANKS alot for taking the time to write this mail to me. 🥰 Your message is truly valued and means a lot. ☺️ I deeply appreciate 🤩 your thoughtful effort in reaching out. 🤩 Please know that I will read your mail carefully, 😤 and I am grateful for your trust in sharing your thoughts with me. 🥺 Your communication enriches this journey, 😌 and I assure you, it won’t go unnoticed. 😉 THANKS AGAIN BUDDY, i hope my efforts in making this application adds some value to your life, thats all i need 😌. By the way you can follow me on instagram 😁 i am down on followers and i wont mind making new kind hearted friends like you !! 🥰 Have a lovely day dear !!  ☺️ Take good care of yourself !! 🥺 and if you have liked this effort of mine, please recommend this application to others !! Hope you are happy with my work, that will  help me alot !! Have a nice day ... 🥰">
+            -->
+            <input type="hidden" name="_autoresponse" value="your custom message">
             <input type="text" name="_honey" style="display:none">
             <input type="hidden" name="_template" value="box">
             <input type="hidden" name="_next" value="https://docwebs.github.io/ToDoPro/MailUs.html">
@@ -836,7 +845,7 @@ textarea::placeholder {
                     <img src="resources/Email/email.png"></img>
                 </div>
                 <div class="cds3">
-                    <input type="email" id="email" name="email" placeholder="Your Email">
+                    <input type="email" name="email" id="email" placeholder="Your Email">
                     <div class="error" id="email-error"></div>
                     <div id="mailNext" onclick="emailValidation()">Next...</div>
                 </div>
@@ -919,7 +928,7 @@ textarea::placeholder {
                 </div>
             </div>
             
-            <div class="card8">
+            <div class="card8 active">
                 <div class="ttl8">
                     Just a single step left 🥳!!
                 </div>
@@ -1189,7 +1198,8 @@ document.getElementById("sendBtn").addEventListener("click", function() {
 //== Card 8
 
 document.getElementById("homeBtn").addEventListener("click", function() {
-   document.querySelector(".card8").classList.add("done");    
+   document.getElementById("homeBtn").classList.add("done");    
+   document.getElementById("homeBtn").disabled = true;
 });
 
 // Validation logic
