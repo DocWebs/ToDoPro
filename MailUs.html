@@ -789,14 +789,7 @@ textarea::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-}      
-
-.card8 .cds8 button.done {
-    background: grey;
-    color: black;
-    transition: 0.9s;
-    transform: translateX(-50%) scale(0.8);
-}    
+} 
         </style>
     </head>
     <body>
@@ -934,7 +927,7 @@ textarea::placeholder {
                     <img src="resources/Email/send.png">
                 </div>
                 <div class="cds8">
-                    <button id="homeBtn" type="submit">Send ??</button>
+                    <button type="submit">Send ??</button>
                 </div>
             </div>        
         </form>
@@ -1191,12 +1184,6 @@ function handleSelection() {
 document.getElementById("sendBtn").addEventListener("click", function() {
     document.querySelector(".card7").classList.add("done");
     document.querySelector(".card8").classList.add("active");
-});
-
-//== Card 8
-
-document.getElementById("homeBtn").addEventListener("click", function() {
-   document.getElementById("homeBtn").classList.add("done");
 });
 
 // Validation logic
