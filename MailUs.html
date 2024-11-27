@@ -1,0 +1,1569 @@
+<html>
+    <head>
+        <title>Mail Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Ga+Maamli&family=Itim&family=Permanent+Marker&family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');            
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+    background: #081b29;
+    overflow: hidden;
+}
+
+/* ---------------------------- */
+
+.mail-us {
+    height: 100vh;
+    width: 100vw;
+    position: relative;    
+    background: #fffff0;
+    overflow: hidden;
+}
+
+/* ++++++++++ */
+
+.card1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #081b29;
+}  
+
+.card1 .ttl1 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,calc(-50% - 210px));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: "Itim", cursive;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #081b29, 0 0 10px #081b29, 0 0 15px #081b29;
+}
+
+.card1.initial .ttl1 {
+    transform: translate(-150vw,calc(-50% - 210px));
+    transition: all 0.8s ease 0.1s;
+}
+
+.card1 .ilu1 {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card1.initial .ilu1 {
+    transform: translate(-150vw,-50%);
+    transition: all 0.8s ease 0.3s;
+}
+
+.card1 .ilu1 img {
+    height: 100%;
+    width: 100%;
+}
+
+.card1 .cds1 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #c94b4b, #a8435c, #6b2a56);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    display: grid;
+    place-items: center;
+}
+
+.card1.initial .cds1 {
+    transform: translateX(-150vw);
+    transition: all 0.8s ease 0.5s;
+}
+
+.card1 .cds1 .iniBTN {
+    height: 60px;
+    width: 160px;
+    background: #081b29;
+    outline: none;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 3px solid #081b29;    
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Nova Square', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ++++++++++ */
+
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #081b29;
+    opacity: 0;
+    pointer-events: none;
+}  
+
+.card2.active,
+.card3.active,
+.card4.active,
+.card5.active,
+.card6.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0s ease 1s;
+}
+
+.card2 .ttl2,
+.card3 .ttl3,
+.card4 .ttl4 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,calc(-50% - 210px));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: "Itim", cursive;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #081b29, 0 0 10px #081b29, 0 0 15px #081b29;
+}
+
+.card2.active .ttl2,
+.card3.active .ttl3,
+.card4.active .ttl4 {
+    transform: translate(-50%,calc(-50% - 210px));
+    transition: all 0.8s ease 0.5s;
+}
+
+.card2.active.done .ttl2,
+.card3.active.done .ttl3,
+.card4.active.done .ttl4 {
+    transform: translate(-150vh,calc(-50% - 210px));
+    transition: all 0.8s ease 0.1s;
+}
+
+.card2 .ilu2,
+.card3 .ilu3,
+.card4 .ilu4,
+.card6 .ilu6 {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(150vh,-50%);
+    pointer-events: none;
+    opacity: 1;
+}
+
+.card2.active .ilu2,
+.card3.active .ilu3,
+.card4.active .ilu4,
+.card6.active .ilu6 {
+    transform: translate(-50%,-50%);
+    transition: all 0.8s ease 0.7s;
+}
+
+.card2.active .ilu2.active,
+.card3.active .ilu3.active,
+.card4.active .ilu4.active,
+.card6.active .ilu6.active {
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-150vw,-50%);
+    transition: 0.8s;
+}
+
+.card2 .ilu2 img,
+.card3 .ilu3 img,
+.card4 .ilu4 img,
+.card6 .ilu6 img {
+    height: 100%;
+    width: 100%;
+}
+
+.card2 .cds2,
+.card3 .cds3,
+.card4 .cds4 {
+    height: 150px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,120px);
+    background: linear-gradient(135deg, #c94b4b, #a8435c, #6b2a56);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 10px;
+    transition: 0.6s;
+}
+
+.card2.active .cds2,
+.card3.active .cds3,
+.card4.active .cds4 {
+    transform: translate(-50%,120px);
+    transition: all 0.8s ease 0.9s;
+}
+
+.card2.active .cds2.active,
+.card3.active .cds3.active,
+.card4.active .cds4.active {
+    transform: translate(-50%,-50%);
+    transition: transform 0.6s ease 0s;
+}
+
+.card2.active.done .cds2.active,
+.card3.active.done .cds3.active,
+.card4.active.done .cds4.active {
+    transform: translate(-150vh,-50%);
+    transition: all 0.8s ease 0.3s;
+}
+
+.card2 .cds2 input,
+.card3 .cds3 input,
+.card4 .cds4 input {
+    height: 40px;
+    width: 250px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    font-family: 'Nova Square', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+}
+
+input::placeholder {
+    color: white;
+}
+
+.card2 .cds2 div,
+.card3 .cds3 div,
+.card4 .cds4 div {
+    color: white;
+    transform: translate(30px,70px);
+    font-size: 12px;
+    font-family: 'Nova Square', sans-serif;
+    font-weight: bold;
+}
+
+.card2 .cds2 #nameNext,
+.card3 .cds3 #mailNext,
+.card4 .cds4 #phoneNext {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,90px);
+    height: 50px;
+    width: 150px;
+    background: #081b29;
+    border: none;
+    outline: none;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Nova Square', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ++++++++++ */
+
+.card5 .ttl5 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,calc(-50% - 240px));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: "Itim", cursive;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #081b29, 0 0 10px #081b29, 0 0 15px #081b29;
+}
+
+.card5.active .ttl5 {
+    transform: translate(-50%,calc(-50% - 240px));
+    transition: all 0.8s ease 0.5s;
+}
+
+.card5.active.done .ttl5 {
+    transform: translate(-150vh,calc(-50% - 240px));
+    transition: all 0.8s ease 0.1s;
+}
+
+.card5 .popup5 {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card5.active .popup5.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s;
+}
+
+.card5 .ilu5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(150vh,calc(-50% + 50px));
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card5.active .ilu5 {
+    transform: translate(-50%,calc(-50% + 50px));
+    transition: all 1.5s ease 0.3s;
+}
+
+.card5.active.done .ilu5 {
+    transform: translate(-150vh,calc(-50% + 50px));
+    transition: all 1.5s ease 0.3s;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel > div {
+    min-width: 300px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.carousel > div:before {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    z-index: -1;
+    transform: translateY(30px);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 3px solid white;
+}
+
+.carousel > div.selected:before {
+    border: 3px solid yellow;
+}
+
+.carousel > div p {
+    height: 80px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Nova Square', sans-serif;
+    color: white;
+    line-height: 80px;
+    transform: translateY(30px);
+}
+
+.carousel > div img {
+    width: 300px;
+    height: 300px;
+    transform: translateY(30px);
+}
+
+.dots {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: grey;
+    border-radius: 50%;
+    transition: background 0.3s;
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+
+.dots span.active {
+    background: white;
+    transform: scale(1.7);
+    transition: 0.5s;
+    border-radius: 3px;
+}
+
+/* ++++++++++ */
+
+.card6 .ttl6 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,calc(-50% - 250px));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: "Itim", cursive;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #081b29, 0 0 10px #081b29, 0 0 15px #081b29;
+}
+
+.card6.active .ttl6 {
+    transform: translate(-50%,calc(-50% - 250px));
+    transition: all 0.8s ease 0.5s;
+}
+
+.card6.active.done .ttl6 {
+    transform: translate(-150vh,calc(-50% - 250px));
+    transition: all 0.8s ease 0.1s;
+}
+
+.card6 .cds6 {
+    height: 90px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,120px);
+    background: linear-gradient(135deg, #c94b4b, #a8435c, #6b2a56);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    transition: 0.6s;
+}
+
+.card6.active .cds6 {
+    transform: translate(-50%,120px);
+    transition: all 0.8s ease 0.9s;
+}
+
+.card6.active .cds6.active {
+    transform: translate(-50%,calc(-50% + 50px));
+    background: transparent;
+    height: 390px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: all 0.6s ease;
+}
+
+.card6.active.done .cds6.active {
+    transform: translate(-150vh,calc(-50% + 50px));
+    height: 390px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: all 0.8s ease 0.5s;
+}
+
+.card6 .cds6 textarea {
+    height: 50px;
+    width: 250px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 15px;
+    color: white;
+    font-family: 'Nova Square', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    resize: none;
+}
+
+.card6 .cds6 .fixz1 {
+    position: absolute;
+    height: 15px;
+    width: 268px;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #081b29;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card6 .cds6 .fixz2 {
+    position: absolute;
+    height: 15px;
+    width: 268px;
+    top: 303px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #081b29;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card6 .cds6 .fixz1.active,
+.card6 .cds6 .fixz2.active {
+    opacity: 1;
+}
+
+.card6.active .cds6.active textarea {
+    height: 320px;
+    width: 300px;
+    top: 0;
+    transition: all 0.8s ease 1s;
+}
+
+textarea::placeholder {
+    color: white;
+}
+
+.card6 .cds6 div {
+    color: white;
+    transform: translate(10px,325px);
+    font-size: 12px;
+    font-family: 'Nova Square', sans-serif;
+    font-weight: bold;
+}
+
+.card6 .cds6 #msgNext {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,340px);
+    height: 50px;
+    width: 150px;
+    background: linear-gradient(135deg, #c94b4b, #a8435c, #6b2a56);
+    border: none;
+    outline: none;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Nova Square', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ++++++++++ */
+
+.card7 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #081b29;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card7.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0s ease 1s;
+}
+
+.card7 .ttl7 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,calc(-50% - 250px));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: "Itim", cursive;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #081b29, 0 0 10px #081b29, 0 0 15px #081b29;
+}
+
+.card7.active .ttl7 {
+    transform: translate(-50%,calc(-50% - 250px));
+    transition: all 0.8s ease 0.5s;
+}
+
+.card7.active.done .ttl7 {
+    transform: translate(-150vh,calc(-50% - 250px));
+    transition: all 0.8s ease 0.1s;
+}
+
+.card7 .ilu7 {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(150vh,-50%);
+    pointer-events: none;
+    opacity: 1;
+}
+
+.card7.active .ilu7 {
+    transform: translate(-50%,-50%);
+    transition: all 0.8s ease 0.7s;
+}
+
+.card7.active.done .ilu7 {
+    transform: translate(-150vw,-50%);
+    transition: all 0.8s ease 0.3s;
+}
+
+.card7 .ilu7 img {
+    height: 100%;
+    width: 100%;
+}
+
+.card7 .cds7 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,120px);
+    background: linear-gradient(135deg, #c94b4b, #a8435c, #6b2a56);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 6px;
+    transition: 0.6s;
+}
+
+.card7.active .cds7 {
+    transform: translate(-50%,120px);
+    transition: all 0.8s ease 0.9s;
+}
+
+.card7.active.done .cds7 {
+    transform: translate(-150vh,120px);
+    transition: all 0.8s ease 0.5s;
+}
+
+.card7 .cds7 #sendBtn {
+    height: 60px;
+    width: 160px;
+    background: #081b29;
+    outline: none;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 3px solid #081b29;    
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Nova Square', sans-serif;
+    transition: transform 0.8s ease, color 0.2s ease;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* +++++++++++ */
+
+.card8 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #081b29;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card8.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0s ease 1s;
+}
+
+.card8 .ttl8 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,calc(-50% - 210px));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: "Itim", cursive;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;   
+    text-shadow: 0 0 5px #081b29, 0 0 10px #081b29, 0 0 15px #081b29;
+}
+
+.card8.active .ttl8 {
+    transform: translate(-50%,calc(-50% - 210px));
+    transition: all 0.8s ease 0.5s;
+}
+
+.card8 .ilu8 {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(150vh,-50%);
+    pointer-events: none;
+    opacity: 1;
+}
+
+.card8.active .ilu8 {
+    transform: translate(-50%,-50%);
+    transition: all 0.8s ease 0.7s;
+}
+
+.card8 .ilu8 img {
+    height: 100%;
+    width: 100%;
+}
+
+.card8 .cds8 {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(150vh,120px);
+    background: linear-gradient(135deg, #c94b4b, #a8435c, #6b2a56);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: 0.6s;
+}
+            
+.card8.active .cds8 {
+    transform: translate(-50%,120px);
+    transition: all 0.8s ease 0.9s;
+}
+
+.card8 .cds8 button {
+    height: 60px;
+    width: 200px;
+    background: #081b29;
+    outline: none;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 3px solid #081b29;    
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Nova Square', sans-serif;
+    transition: transform 0.8s ease, color 0.2s ease;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.card8 .popup8 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #fffff0;
+    height: 300px;
+    width: 300px;
+    z-index: 999;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px;
+    font-family: 'Nova Square', sans-serif;
+    text-align: center;
+    transition: 0.5s;
+}
+.card8 .popup8.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+    transition: 0.5s;
+    transition-delay: 0.4s;
+}
+
+.card8 .popup8 .pop8Clk {
+    height: 40px;
+    width: 120px;
+    background: #081b29;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px; 
+}
+
+.cd8Dim {
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+    
+}
+.cd8Dim.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s;
+}
+
+/* Blobing animation */
+
+.blob1 {
+    height: 270px;
+    width: 270px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.3);
+    filter: blur(10px);
+    border-radius: 46% 54% 57% 43% / 46% 16% 84% 54%;
+    animation: blober 10s linear infinite alternate;
+}
+
+.blob2 {
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    z-index: -2;
+    background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    border-radius: 46% 54% 57% 43% / 46% 16% 84% 54%;
+    animation: blober 10s linear infinite alternate;
+}
+
+@keyframes blober {
+    0% {
+        border-radius: 46% 54% 57% 43% / 46% 16% 84% 54%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    10% {
+        border-radius: 53% 47% 36% 64% / 35% 61% 39% 65%;
+        transform: translate(-50%,-50%) scale(1.1);
+    }
+    20% {
+        border-radius: 57% 43% 68% 32% / 54% 45% 55% 46%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    30% {
+        border-radius: 67% 33% 43% 57% / 44% 49% 51% 56%;
+        transform: translate(-50%,-50%) scale(1.1);
+    }
+    40% {
+        border-radius: 41% 59% 47% 53% / 34% 70% 30% 66%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    50% {
+        border-radius: 63% 37% 44% 56% / 33% 69% 31% 67%;
+        transform: translate(-50%,-50%) scale(1.1);
+    }
+    60% {
+        border-radius: 80% 20% 69% 31% / 62% 69% 31% 38%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    70% {
+        border-radius: 39% 61% 69% 31% / 57% 63% 37% 43%;
+        transform: translate(-50%,-50%) scale(1.1);
+    }
+    80% {
+        border-radius: 63% 37% 40% 60% / 41% 76% 24% 59%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    90% {
+        border-radius: 36% 64% 62% 38% / 62% 51% 49% 38%;
+        transform: translate(-50%,-50%) scale(1.1);
+    }
+    100% {
+        border-radius: 39% 61% 62% 38% / 66% 51% 49% 34%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+
+.indexBtn {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999999;
+    background: linear-gradient(-35deg, #c94b4b, #a8435c, #6b2a56);
+    outline: none;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 4px;
+    font-family: 'Nova Square', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px #081b29;
+}
+
+        </style>
+    </head>
+    <body>
+        <button class="indexBtn" onclick="home()">Home</button>
+        <form class="mail-us" action="https://formsubmit.co/9a5954fc0fcd14ecade8d5a733900b23" method="POST">
+            
+            <!-- For the Mail Sender -->
+            <input type="hidden" name="_autoresponse" value="Hey there Buddy !! 🥰, this is a auto response but hand written by me. 😅 THANKS alot for taking the time to write this mail to me. 🥰 Your message is truly valued and means a lot. ☺️ I deeply appreciate 🤩 your thoughtful effort in reaching out. 🤩 Please know that I will read your mail carefully, 😤 and I am grateful for your trust in sharing your thoughts with me. 🥺 Your communication enriches this journey, 😌 and I assure you, it won’t go unnoticed. 😉 THANKS AGAIN BUDDY, i hope my efforts in making this application adds some value to your life, thats all i need 😌. By the way you can follow me on instagram 😁 i am down on followers and i wont mind making new kind hearted friends like you !! 🥰 Have a lovely day dear !!  ☺️ Take good care of yourself !! 🥺 and if you have liked this effort of mine in making the application, please recommend this application to others that will  help me alot !! I hope you are happy with my work, have a nice day ... 🥰">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_next" value="https://docwebs.github.io/ToDoPro/MailUs.html">
+            <!-- Fir the user -->
+            
+            <div class="card1">
+                <div class="ilu1">
+                    <div class="blob1"></div>
+                    <div class="blob2"></div>
+                    <img src="resources/Email/value.png"></img>
+                </div>
+                <div class="ttl1">
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f97a/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f97a/512.gif" alt="🥺" width="60" height="60">
+                    </picture> 
+                    We value your messages !!
+                </div>
+                <div class="cds1">
+                    <div class="iniBTN">Mail Us ??</div>
+                </div>
+            </div>
+            
+            <div class="card2">
+                <div class="ilu2">
+                    <div class="blob1"></div>
+                    <div class="blob2"></div>
+                    <img src="resources/Email/name.png"></img>
+                </div>
+                <div class="ttl2">
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f603/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f603/512.gif" alt="😃" width="60" height="60">
+                    </picture>
+                    Tell us your name !!
+                </div>
+                <div class="cds2">
+                    <input type="text" id="name" name="Name" placeholder="Your Name">
+                    <div class="error" id="name-error"></div>
+                    <div id="nameNext" onclick="nameValidation()">Next...</div>
+                </div>
+            </div>
+            
+            <div class="card3">
+                <div class="ilu3">
+                    <div class="blob1"></div>
+                    <div class="blob2"></div>
+                    <img src="resources/Email/email.png"></img>
+                </div>
+                <div class="ttl3">
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f914/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f914/512.gif" alt="🤔" width="60" height="60">
+                    </picture>
+                    What's your Email address ?? 
+                </div>
+                <div class="cds3">
+                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <div class="error" id="email-error"></div>
+                    <div id="mailNext" onclick="emailValidation()">Next...</div>
+                </div>
+            </div>
+            
+            <div class="card4">
+                <div class="ilu4">
+                    <div class="blob1"></div>
+                    <div class="blob2"></div>
+                    <img src="resources/Email/phone.png"></img>
+                </div>
+                <div class="ttl4">
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f9d0/512.gif" alt="🧐" width="60" height="60">
+                    </picture>
+                    What's your phone number ?? 
+                </div>
+                <div class="cds4">
+                    <input type="tel" id="phone" name="Phone-number" placeholder="Your Phone Number">
+                    <div class="error" id="phone-error"></div>
+                    <div id="phoneNext" onclick="numberValidation()">Next...</div>
+                </div>
+            </div>
+            
+            <div class="card5">
+                <div class="popup5">
+                    <lord-icon src="https://cdn.lordicon.com/xkmjbjuw.json" trigger="loop" delay="1000" colors="primary:#fffff0" style="width:300px;height:300px;"></lord-icon>
+                </div>
+                <div class="ilu5">
+                    <div class="carousel">
+                        <div data-value="Reporting a Bug / Issue / Glitch">
+                            <p>Found a Bug/Glitch ??</p>
+                            <img src="resources/Email/bug.png" alt="Bug">
+                        </div>
+                        <div data-value="Submitting a new idea for the app">
+                            <p>Have a suggestion ??</p>
+                            <img src="resources/Email/idea.png" alt="Idea">
+                        </div>
+                        <div data-value="Reviewing about the app">
+                            <p>Reviewing the App ??</p>
+                            <img src="resources/Email/review.png" alt="Review">
+                        </div>
+                        <div data-value="Remarking the app">
+                            <p>Remarking the App ??</p>
+                            <img src="resources/Email/remark.png" alt="Remark">
+                        </div>
+                    </div>
+                    <div class="dots">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="ttl5">
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f913/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f913/512.gif" alt="🤓" width="60" height="60">
+                    </picture>
+                    Reason behind contacting us ??
+                </div>
+                <select id="subject" name="Subject" style="display: none;">
+                    <option value="" selected></option>
+                    <option value="Reporting a Bug / Issue / Glitch"></option>
+                    <option value="Submitting a new idea for the app"></option>
+                    <option value="Reviewing about the app"></option>
+                    <option value="Remarking the app"></option>
+                </select>
+            </div>         
+            
+            <div class="card6">
+                <div class="ilu6">
+                    <div class="blob1"></div>
+                    <div class="blob2"></div>
+                    <img src="resources/Email/mesaage.png"></img>
+                </div>
+                <div class="ttl6">
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f609/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f609/512.gif" alt="😉" width="60" height="60">
+                    </picture>
+                    speak up your mind ...
+                </div>
+                <div class="cds6">
+                    <textarea id="message" name="Message" placeholder="Type your message here ..."></textarea>
+                    <div class="fixz1"></div>
+                    <div class="fixz2"></div>
+                    <div class="error" id="message-error"></div>
+                    <div id="msgNext" onclick="messageValidation()">Done ??</div>
+                </div>
+            </div>   
+            
+            <div class="card7">
+                <div class="ilu7"></div>
+                <div class="ttl7"></div>
+                <div class="cds7">
+                    <div id="sendBtn">Proceed</div>
+                </div>
+            </div>
+            
+            <div class="card8">
+                <div class="popup8">
+                    <p>This page will finally send the email, after clicking the send button wait for some time you will be redirected to a page that confermes the sending of the mail !! <br><br> if you have waited for a little longer try clicking the send button again ... there might be site trafic ...</p>
+                    <span class="pop8Clk">Got It !!</span>
+                </div>
+                <div class="cd8Dim"></div>
+                <div class="ilu8">
+                    <div class="blob1"></div>
+                    <div class="blob2"></div>
+                    <img src="resources/Email/send.png">
+                </div>
+                <div class="ttl8">
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f973/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f973/512.gif" alt="🥳" width="60" height="60">
+                    </picture>
+                    Just a single step left !!
+                </div>
+                <div class="cds8">
+                    <button type="submit" id="clickk">Send ??</button>
+                </div>
+            </div>        
+        </form>
+        
+        <script>
+// Event Handelers
+
+// Home Redirection ...
+
+function home() {
+    window.location.href = "index.html";
+    location.reload();
+}
+
+// Full screen 
+function openFullscreen() {
+    let elem = document.documentElement; 
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { 
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { 
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { 
+        elem.msRequestFullscreen();
+    }
+}
+
+//== Card 1
+
+document.querySelector(".iniBTN").addEventListener("click", function() {
+    openFullscreen()
+    setTimeout(function() {
+        document.querySelector(".card1").classList.add("initial");
+        document.querySelector(".card2").classList.add("active");
+    }, 500)
+});
+
+//== Card 2
+
+let nameAnimation = false;
+document.getElementById('name').addEventListener('click', () => {
+    if (nameAnimation) return;
+    document.getElementById("name").disabled = true;
+    document.querySelector(".ilu2").classList.add("active");
+    setTimeout(function() {
+        document.querySelector(".cds2").classList.add("active");
+    }, 1000)
+    setTimeout(function() {
+        document.getElementById("name").disabled = false;
+        document.getElementById("name").focus()
+        nameAnimation = true;
+    }, 2500)
+});
+
+document.getElementById("nameNext").addEventListener("click", function() {
+    let check1 = nameValidation();
+    setTimeout(function() {
+        if (check1) {
+            document.querySelector(".card2").classList.add("done");
+            document.querySelector(".card3").classList.add("active");
+        }
+    }, 500)
+});
+
+//== Card 3
+
+let mailAnimation = false;
+document.getElementById('email').addEventListener('click', () => {
+    if (mailAnimation) return;
+    document.getElementById("email").disabled = true;
+    document.querySelector(".ilu3").classList.add("active");
+    setTimeout(function() {
+        document.querySelector(".cds3").classList.add("active");
+    }, 1000)
+    setTimeout(function() {
+        document.getElementById("email").disabled = false;
+        document.getElementById("email").focus()
+        mailAnimation = true;
+    }, 2500)
+});
+
+document.getElementById("mailNext").addEventListener("click", function() {
+    let check2 = emailValidation();
+    setTimeout(function() {
+        if (check2) {
+            document.querySelector(".card3").classList.add("done");
+            document.querySelector(".card4").classList.add("active");
+        }
+    }, 500)
+});
+
+//== Card 4
+
+let numAnimation = false;
+document.getElementById('phone').addEventListener('click', () => {
+    if (numAnimation) return;
+    document.getElementById("phone").disabled = true;
+    document.querySelector(".ilu4").classList.add("active");
+    setTimeout(function() {
+        document.querySelector(".cds4").classList.add("active");
+    }, 1000)
+    setTimeout(function() {
+        document.getElementById("phone").disabled = false;
+        document.getElementById("phone").focus()
+        numAnimation = true;
+    }, 2500)
+});
+
+document.getElementById("phoneNext").addEventListener("click", function() {
+    let check3 = numberValidation();
+    setTimeout(function() {
+        if (check3) {
+            document.querySelector(".card4").classList.add("done");
+            document.querySelector(".card5").classList.add("active");            
+        }
+    }, 500)
+    setTimeout(function() {
+        document.querySelector(".popup5").classList.add("active");     
+        setTimeout(function() {
+            document.querySelector(".popup5").classList.remove("active");
+        }, 4300)       
+    }, 2500)
+});
+
+//== Card 5
+
+const carousel = document.querySelector('.carousel');
+const cards = document.querySelectorAll('.carousel > div');
+const dots = document.querySelectorAll('.dots span');
+const subject = document.getElementById('subject');
+
+let activeIndex = 0;
+let startX = 0;
+let isSwiping = false;
+
+carousel.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+});
+
+carousel.addEventListener('touchmove', (e) => {
+    if (!isSwiping) return;
+    const diff = e.touches[0].clientX - startX;
+
+    if (diff > 50) {
+        swipeLeft();
+        isSwiping = false;
+    } else if (diff < -50) {
+        swipeRight();
+        isSwiping = false;
+    }
+});
+
+carousel.addEventListener('touchend', () => {
+    isSwiping = false;
+});
+
+function swipeRight() {
+    activeIndex = (activeIndex + 1) % cards.length;
+    updateCarousel();
+}
+
+function swipeLeft() {
+    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const offset = -activeIndex * 300; 
+    cards.forEach((card) => {
+        card.style.transform = `translateX(${offset}px)`;
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIndex);
+    });
+}
+
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
+        cards.forEach((c) => c.classList.remove('selected'));        
+        card.classList.add('selected');
+        const value = card.dataset.value || 'null';
+        subject.value = value;
+
+        const check4 = subjectValidation();
+        setTimeout(function() {
+            if (check4) {
+                document.querySelector(".card5").classList.add("done");
+                document.querySelector(".card6").classList.add("active");
+                handleSelection()
+            }
+        }, 500);
+    });
+});
+
+updateCarousel();
+
+//== Card 6
+
+let msgAnimation = false;
+document.getElementById('message').addEventListener('click', () => {
+    if (msgAnimation) {
+        return
+    }
+    document.getElementById("message").disabled = true;
+    document.querySelector(".ilu6").classList.add("active");
+    setTimeout(function() {
+        document.querySelector(".cds6").classList.add("active");
+    }, 1000)
+    setTimeout(function() {
+        document.querySelector(".fixz1").classList.add("active");
+        document.querySelector(".fixz2").classList.add("active");
+    }, 2900)
+    setTimeout(function() {
+        document.getElementById("message").disabled = false;
+        document.getElementById("message").focus()
+        msgAnimation = true;
+    }, 3000)
+});
+
+document.getElementById("msgNext").addEventListener("click", function() {
+    let check5 = messageValidation();
+    setTimeout(function() {
+        if (check5) {
+            document.querySelector(".card6").classList.add("done");
+            document.querySelector(".card7").classList.add("active");
+        }
+    }, 500)
+});
+
+//== Card 7
+
+function handleSelection() {
+    const selectedOption = document.getElementById('subject').value; // Fetch selected option
+    const ttl7 = document.querySelector('.ttl7');
+    const ilu7 = document.querySelector('.ilu7');
+
+    switch (selectedOption) {
+        case "Reporting a Bug / Issue / Glitch":
+            ttl7.innerHTML = `<picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/263a_fe0f/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/263a_fe0f/512.gif" alt="☺" width="60" height="60"></picture>Thanks for reporting this bug.`;
+            ilu7.innerHTML = `<div class="blob1"></div><div class="blob2"></div><img src="resources/Email/fix.png">`;
+            break;
+
+        case "Submitting a new idea for the app":
+            ttl7.innerHTML = `<picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f929/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f929/512.gif" alt="🤩" width="60" height="60"></picture>Thanks for the idea.`;
+            ilu7.innerHTML = `<div class="blob1"></div><div class="blob2"></div><img src="resources/Email/think.png">`;
+            break;
+
+        case "Reviewing about the app":
+            ttl7.innerHTML = `<picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f970/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f970/512.gif" alt="🥰" width="60" height="60"></picture>Thanks for your reviews!!`;
+            ilu7.innerHTML = `<div class="blob1"></div><div class="blob2"></div><img src="resources/Email/value2.png">`;
+            break;
+
+        case "Remarking the app":
+            ttl7.innerHTML = `<picture><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f604/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f604/512.gif" alt="😄" width="60" height="60"></picture>Thanks for your remarks !!`;
+            ilu7.innerHTML = `<div class="blob1"></div><div class="blob2"></div><img src="resources/Email/value2.png">`;
+            break;
+
+        default:
+            ttl7.innerHTML = "";
+            ilu7.innerHTML = "";
+    }
+}
+
+document.getElementById("sendBtn").addEventListener("click", function() {
+    document.querySelector(".card7").classList.add("done");
+    document.querySelector(".card8").classList.add("active");
+    setTimeout(function() {
+        document.querySelector(".popup8").classList.add("active");
+        document.querySelector(".cd8Dim").classList.add("active");
+    }, 1500) 
+});
+
+//== Card 8
+
+document.querySelector(".pop8Clk").addEventListener("click", function() {
+    document.querySelector(".popup8").classList.remove("active");
+    document.querySelector(".cd8Dim").classList.remove("active");
+});
+
+
+
+// Validation logic
+
+function nameValidation() {
+    const name = document.getElementById('name');
+    const nameError = document.getElementById('name-error');
+    nameError.textContent = '';
+
+    if (!name.value.trim()) {
+        nameError.textContent = 'Name is required';
+        return false;
+    }
+    if (!/^[a-zA-Z\s]+$/.test(name.value)) {
+        nameError.textContent = 'Name should only contain letters';
+        return false;
+    }
+    return true;
+}
+
+function numberValidation() {
+    const phone = document.getElementById('phone');
+    const phoneError = document.getElementById('phone-error');
+    phoneError.textContent = '';
+
+    if (!phone.value.trim()) {
+        phoneError.textContent = 'Phone number is required';
+        return false;
+    }
+    if (!/^\d{10}$/.test(phone.value)) {
+        phoneError.textContent = 'Enter a valid 10-digit phone number';
+        return false;
+    }
+    return true;
+}
+
+function emailValidation() {
+    const email = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+    emailError.textContent = '';
+
+    if (!email.value.trim()) {
+        emailError.textContent = 'Email is required';
+        return false;
+    }
+    if (!/^\S+@\S+\.\S+$/.test(email.value)) {
+        emailError.textContent = 'Invalid email';
+        return false;
+    }
+    return true;
+}
+
+function subjectValidation() {
+    const subject = document.getElementById('subject');
+
+    if (!subject.value) {
+        return false;
+    }
+    
+    return true;
+}
+
+function messageValidation() {
+    const message = document.getElementById('message');
+    const messageError = document.getElementById('message-error');
+    messageError.textContent = '';
+
+    if (!message.value.trim()) {
+        messageError.textContent = 'Message is required';
+        return false;
+    }
+    return true;
+}            
+        </script>
+    </body>
+</html>
